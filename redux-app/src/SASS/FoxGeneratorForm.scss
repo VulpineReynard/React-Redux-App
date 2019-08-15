@@ -1,0 +1,32 @@
+.fox-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px auto;
+  width: 250px;
+  height: 100px;
+  border-radius: 10px;
+  background: white;
+
+  button {
+    padding: 10px;
+    margin: 28px auto;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: #9c00ea;
+    color: white;
+    font-size: 1.1rem;
+    transition: all .2s;
+
+    &:hover {
+      background: #a636df;
+    }
+    &:active {
+      background: #c46af1;
+      transform: translateY(3px);
+    }
+  }
+}
