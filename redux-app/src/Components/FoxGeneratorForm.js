@@ -1,13 +1,23 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { getFox } from '../Actions/foxAction';
 
-const FoxGeneratorForm = () => {
+const FoxGeneratorForm = (props) => {
   return (
     <form className="fox-form">
-      <button>
+      <button onClick={(event) => {event.preventDefault(); props.getFox()}}>
         Generate Me A Fox
       </button>
     </form>
   );
 }
 
-export default FoxGeneratorForm;
+const mapStateToProps = state => ({
+  fox: state.fox,
+  test: state.test
+})
+
+export default connect(
+  mapStateToProps,
+  { getFox }
+)(FoxGeneratorForm);
