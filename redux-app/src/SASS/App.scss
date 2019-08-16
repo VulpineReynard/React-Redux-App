@@ -1,0 +1,18 @@
+@import './Header.scss';
+@import './FoxGeneratorForm.scss';
+@import './Fox.scss';
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(48, 48, 48);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
