@@ -1,24 +1,32 @@
 import {
-  FETCH_FOX_START
+  FETCH_FOX_START,
+  FETCH_FOX_SUCCESS,
+  FETCH_FOX_FAILURE
 } from "../Actions/foxAction";
 
 const foxData = {
   fox: {},
   isLoading: false,
-  test: ""
 }
 
-export const foxReducer = (state = foxData, action) => {
+const foxReducer = (state = foxData, action) => {
   switch (action.type) {
     case FETCH_FOX_START:
-      console.log(action.payload)
-    return {
-      ...state,
-      isLoading: true,
-      test: action.payload
-    }
+      return {
+        ...state,
+        isLoading: true,
+      }
+    
+      case FETCH_FOX_SUCCESS:
+        return {
+          ...state,
+          isLoading: false,
+          fox: action.payload
+        }
 
     default:
       return state;
   }
 }
+
+export default foxReducer;

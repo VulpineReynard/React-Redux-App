@@ -1,7 +1,23 @@
 .fox-container {
-  width: 700px;
+  width: 500px;
   height: 700px;
-  margin: auto;
+  margin: 50px auto;
   border-radius: 10px;
-  background: white;
+
+  .loader {
+    margin: auto;
+  }
+  
+  img {
+    width: 100%;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 25px 25px 0 0 #ff6600;
+    transition: all .3s;
+    transform: translate(-15px, -15px);
+    &:hover {
+      box-shadow: none;
+      transform: translate(0);
+    }
+  }
 }
